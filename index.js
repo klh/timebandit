@@ -3,8 +3,8 @@ var app = express()
 var time = require('time')(Date);
 
 var d = new Date();
-d.setTimezone('UTC');
-var now = a.toString();
+d.setTimezone('Europe/Copenhagen');
+var now = d.toString();
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
