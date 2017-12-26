@@ -13,6 +13,13 @@ app.get('/', function (request, response) {
     response.send(now)
 })
 
+
+app.get('/epoch', function (request, res) {
+    res.setHeader('Content-Type', 'text/html');
+    res.write(" "+d.getTime());
+    res.end();
+})
+
 app.listen(app.get('port'), function () {
     console.log("Node app is running at localhost:" + app.get('port'))
 })
